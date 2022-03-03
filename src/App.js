@@ -49,7 +49,20 @@ function App() {
           ))}
         </div>
         <br />
-        <input ref={inputRef}></input>
+
+        <label for="name">
+          TASK:{" "}
+          <input
+            id="name"
+            title="newInput"
+            type="text"
+            required
+            pattern="[a-z]{6,12}"
+            placeholder="Enter Task"
+            ref={inputRef}
+          />
+        </label>
+
         <button
           onClick={() =>
             dispatchList(
