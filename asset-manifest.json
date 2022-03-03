@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/reduxToDoList/static/css/main.5fe6ae64.css",
-    "main.js": "/reduxToDoList/static/js/main.870ac884.js",
+    "main.js": "/reduxToDoList/static/js/main.f1878f27.js",
     "static/js/787.97a945da.chunk.js": "/reduxToDoList/static/js/787.97a945da.chunk.js",
     "static/media/X.png": "/reduxToDoList/static/media/X.a684a14ca4c3776c7938.png",
     "index.html": "/reduxToDoList/index.html",
     "main.5fe6ae64.css.map": "/reduxToDoList/static/css/main.5fe6ae64.css.map",
-    "main.870ac884.js.map": "/reduxToDoList/static/js/main.870ac884.js.map",
+    "main.f1878f27.js.map": "/reduxToDoList/static/js/main.f1878f27.js.map",
     "787.97a945da.chunk.js.map": "/reduxToDoList/static/js/787.97a945da.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5fe6ae64.css",
-    "static/js/main.870ac884.js"
+    "static/js/main.f1878f27.js"
   ]
 }
