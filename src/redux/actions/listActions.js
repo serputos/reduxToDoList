@@ -17,16 +17,10 @@ export const resetList = () => {
     type: "RESET_LIST",
   };
 };
-export const toDO = (todo) => {
+export const toDO = (completed) => {
   return {
     type: "TODO",
-    payload: todo,
-  };
-};
 
-export const done = (done) => {
-  return {
-    type: "DONE",
-    payload: done,
+    completed: completed,
   };
 };

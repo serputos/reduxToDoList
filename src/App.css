@@ -46,3 +46,9 @@
   align-items: center;
   gap: 10px;
 }
+.colorVerde {
+  color: green;
+}
+.colorRojo {
+  color: red;
+}

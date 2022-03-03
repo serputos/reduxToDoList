@@ -8,21 +8,31 @@ import {
 } from "./redux/actions/listActions";
 import listReducer from "./redux/reducers/listReducer";
 import X from "./X.png";
+import { useRef } from "react";
 
 function App() {
   const list = useSelector((store) => store.listReducer.list);
 
   const dispatchList = useDispatch();
-  console.log("checklist");
+  const inputRef = useRef();
 
   return (
     <div className="App">
       <header className="App-header">
         <div className="display">
           {list.map((name, i) => (
-            <p className="flex">
-              {"✦ " + list[i] + "        "}
-              <div onClick={() => dispatchList(toDO("done"))}>hola</div>
+            <p id="tarea" className="flex">
+              {"✦ " + name.payload + " Tasca"}
+              <div
+                className={
+                  list[i].completed === "Done" ? "colorVerde" : "colorRojo"
+                }
+                onClick={() => {
+                  dispatchList(toDO((name.completed = "Done")));
+                }}
+              >
+                {name.completed}
+              </div>
 
               <img
                 heigth="30px"
@@ -35,14 +45,18 @@ function App() {
           ))}
         </div>
         <br />
-        <input id="myText"></input>
+        <input ref={inputRef}></input>
         <button
           onClick={() =>
-            dispatchList(increaseList(document.getElementById("myText").value))
+            dispatchList(
+              increaseList(inputRef.current.value),
+              (inputRef.current.value = "")
+            )
           }
         >
           INCREASE LIST
         </button>
+
         <br />
         <button onClick={() => dispatchList(resetList())}>RESET</button>
       </header>
