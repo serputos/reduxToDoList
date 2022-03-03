@@ -28,7 +28,11 @@ function App() {
                   list[i].completed === "Done" ? "colorVerde" : "colorRojo"
                 }
                 onClick={() => {
-                  dispatchList(toDO((name.completed = "Done")));
+                  if (list[i].completed === "toDo") {
+                    dispatchList(toDO((name.completed = "Done")));
+                  } else {
+                    dispatchList(toDO((name.completed = "toDo")));
+                  }
                 }}
               >
                 {name.completed}
